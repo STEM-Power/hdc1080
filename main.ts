@@ -43,9 +43,9 @@ namespace HDC1080 {
         let TH1 = 0;
         let TH2 = 0;
         TH_raw = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
-        TH1 = TH_raw / 65536 
-        TH2 = Math.roundWithPrecision(TH1, 3) 
-        let TH = TH2 * 165 - 40
+        TH1 = TH_raw / 65536;
+        TH2 = Math.roundWithPrecision(TH1, 3);
+        let TH = TH2 * 165 - 40;
         return Math.roundWithPrecision(TH, 1);
     }
 
@@ -59,7 +59,7 @@ namespace HDC1080 {
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE);
         basic.pause(10);
         let RH_raw = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
-        let RH = RH_raw / 65536 * 100
+        let RH = RH_raw / 65536 * 100;
         return Math.roundWithPrecision(RH, 1);
     }
 
