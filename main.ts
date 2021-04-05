@@ -20,13 +20,13 @@ namespace HDC1080 {
     export function HDC1080_init(): void {
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x02, 0x0000); //*config the HDC1080 to 14 bits TH and 14 bits RH measure separately, heater disabled//
         basic.pause(100);
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE); //*Temperature measurement//
-        basic.pause(10);
-        pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);   
-        basic.pause(10);
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE);   //*Humidity measurement//
-        basic.pause(10);
-        pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
+        //*pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE); //*Temperature measurement//
+        //*basic.pause(10);
+        //*pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);   
+        //*basic.pause(10);
+        //*pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE);   //*Humidity measurement//
+        //*basic.pause(10);
+        //*pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
         
     }
 
@@ -62,7 +62,5 @@ namespace HDC1080 {
         let RH = RH_raw / 65536 * 100;
         return Math.roundWithPrecision(RH, 1);
     }
-
-
 
 }
