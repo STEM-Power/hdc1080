@@ -1,6 +1,6 @@
 {
     "name": "HDC1080",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Temperature and humidity sensor control extension for microbit makecode",
     "dependencies": {
         "core": "*",
