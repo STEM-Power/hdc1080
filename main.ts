@@ -7,7 +7,7 @@
 /**
  * HDC1080
  */
-//% weight=100 color=#0975ff icon="\uf76b" block="HDC1080"
+//% weight=100 color=#0975ff icon="\uf043" block="HDC1080"
 namespace HDC1080 {
     
     let HDC1080_I2C_ADDR = 0x40;
@@ -30,6 +30,7 @@ namespace HDC1080 {
 
     /**
      * read Device ID from HDC1080
+     * @param reg I2C command, eg: 255
      */
     //% blockId="read_deviceID" block="read device ID"
     //% weight=99 blockGap=8
