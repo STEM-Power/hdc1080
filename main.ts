@@ -29,10 +29,10 @@ namespace HDC1080 {
     }
 
     /**
-     * read Device ID from HDC1080
+     * read Device info from HDC1080
      * @param reg I2C command, eg: 255
      */
-    //% blockId="read_deviceID" block="read device ID"
+    //% blockId="read_device_info" block="read device info by command %reg"
     //% weight=99 blockGap=8
     export function read_deviceID(reg: number): number {
         let buf = pins.createBuffer(2);
