@@ -30,12 +30,11 @@ namespace HDC1080 {
 
     /**
      * read Device info from HDC1080
-     * @param reg I2C command, eg: 255
      */
-    //% blockId="read_device_info" block="read device info by command %reg"
+    //% blockId="read_device_info" block="read device info by command"
     //% weight=99 blockGap=8
     export function read_deviceID(): number {
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0xFF, NumberFormat.UInt16BE)
+        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0xFF, NumberFormat.UInt8BE)
         return pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
     }
 	
