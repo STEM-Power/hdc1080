@@ -27,7 +27,8 @@ namespace HDC1080 {
         //*pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE);   //*Humidity measurement//
         //*basic.pause(10);
         //*pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
-        
+        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0xFF, NumberFormat.UInt8BE);
+        pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
     }
 
     /**
