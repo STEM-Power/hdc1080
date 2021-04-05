@@ -35,7 +35,7 @@ namespace HDC1080 {
     //% blockId="read_temperture" block="Temperature"
     //% weight=90 blockGap=8
     export function read_temperature(): number {
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE, false);
+        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE);
         basic.pause(10);
         let TH_raw = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
         let TH_buf = TH_raw / 65536 
@@ -50,7 +50,7 @@ namespace HDC1080 {
     //% blockId="read_humidity" block="Humidity"
     //% weight=89 blockGap=8
     export function read_humidity(): number {
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE, false);
+        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE);
         basic.pause(10);
         let RH_raw = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
         let RH = RH_raw / 65536 * 100
