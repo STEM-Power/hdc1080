@@ -19,12 +19,12 @@ namespace HDC1080 {
     //% weight=100 blockGap=8
     export function HDC1080_init(): void {
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x02, 0x0000); //*config the HDC1080 to 14 bits TH and 14 bits RH measure separately, heater disabled//
-        basic.pause(10);
+        basic.pause(1000);
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE, false); //*Temperature measurement//
-        basic.pause(10);
+        basic.pause(1000);
         pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);     
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x01, NumberFormat.UInt8BE, false);   //*Humidity measurement//
-        basic.pause(10);
+        basic.pause(1000);
         pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
         
     }
