@@ -36,7 +36,7 @@ namespace HDC1080 {
     //% weight=99 blockGap=8
     export function read_deviceID(reg: number): number {
         let buf = pins.createBuffer(2);
-        buf[0] = reg;
+        buf[0] = reg>>8;
         buf[1] = reg;
         pins.i2cWriteBuffer(HDC1080_I2C_ADDR, buf)
         return pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
