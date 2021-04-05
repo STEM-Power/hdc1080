@@ -46,10 +46,8 @@ namespace HDC1080 {
     //% blockId="read_temperture" block="Temperature"
     //% weight=90 blockGap=8
     export function read_temperature(): number {
-        pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0xFF, NumberFormat.UInt8BE);
-        let deviceID = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE);
-        basic.pause(10);
+        basic.pause(100);
         let TH_raw = 0;
         let TH1 = 0;
         let TH2 = 0;
