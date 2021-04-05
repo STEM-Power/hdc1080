@@ -30,6 +30,7 @@ namespace HDC1080 {
         
     }
 
+
     /**
      * Temperature
      */
@@ -39,8 +40,9 @@ namespace HDC1080 {
         pins.i2cWriteNumber(HDC1080_I2C_ADDR, 0x00, NumberFormat.UInt8BE);
         basic.pause(10);
         let TH_raw = pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
-        let TH_buf = TH_raw / 65536 
-        let TH = Math.roundWithPrecision(TH_buf, 2) * 165 - 40
+        let TH1 = TH_raw / 65536 
+        let TH2 = Math.roundWithPrecision(TH1, 2) 
+        let TH = TH2 * 165 - 40
         return Math.roundWithPrecision(TH, 1);
     }
 
