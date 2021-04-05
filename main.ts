@@ -35,10 +35,7 @@ namespace HDC1080 {
     //% blockId="read_device_info" block="read device info by command %reg"
     //% weight=99 blockGap=8
     export function read_deviceID(reg: number): number {
-        let buf = pins.createBuffer(2);
-        buf[0] = reg >> 8;
-        buf[1] = reg;
-        pins.i2cWriteBuffer(HDC1080_I2C_ADDR, buf)
+        pins.i2cWriteNumber(HDC1080_I2C_ADDR, reg, NumberFormat.UInt16BE)
         return pins.i2cReadNumber(HDC1080_I2C_ADDR, NumberFormat.UInt16BE);
     }
 	
