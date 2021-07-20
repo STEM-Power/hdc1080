@@ -1,0 +1,7 @@
+{
+  "HDC1080.HDC1080_init|block": "HDC1080 設定",
+  "HDC1080.read_humidity|block": "濕度",
+  "HDC1080.read_temperature|block": "溫度",
+  "HDC1080|block": "HDC1080",
+  "{id:category}HDC1080": "HDC1080"
+}
