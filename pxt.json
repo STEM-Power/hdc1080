@@ -10,6 +10,8 @@
     "files": [
         "main.blocks",
         "main.ts",
+        "_locales/zh-TW/HDC1080-jsdoc-strings.json"
+        "_locales/zh-TW/HDC1080-strings.json"
         "README.md"
     ],
     "testFiles": [
