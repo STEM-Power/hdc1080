@@ -1,6 +1,6 @@
 {
-  "HDC1080": "HDC1080 ¼Ò¶ômicrobit makecodeÂX¥R .\nFrom STEM Power Limited.\nhttps://stem-power.com\n\nHDC1080",
+  "HDC1080": "HDC1080 æ¨¡å¡Šmicrobit makecodeæ“´å…… .\nFrom STEM Power Limited.\nhttps://stem-power.com\n\nHDC1080",
   "HDC1080.HDC1080_init": "HDC1080 Init",
-  "HDC1080.read_humidity": "Àã«×",
-  "HDC1080.read_temperature": "·Å«×"
+  "HDC1080.read_humidity": "æ¿•åº¦",
+  "HDC1080.read_temperature": "æº«åº¦"
 }
