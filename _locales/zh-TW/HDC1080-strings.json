@@ -1,7 +1,7 @@
 {
-  "HDC1080.HDC1080_init|block": "HDC1080 ³]©w",
-  "HDC1080.read_humidity|block": "Àã«×",
-  "HDC1080.read_temperature|block": "·Å«×",
+  "HDC1080.HDC1080_init|block": "HDC1080 è¨­å®š",
+  "HDC1080.read_humidity|block": "æ¿•åº¦",
+  "HDC1080.read_temperature|block": "æº«åº¦",
   "HDC1080|block": "HDC1080",
   "{id:category}HDC1080": "HDC1080"
 }
